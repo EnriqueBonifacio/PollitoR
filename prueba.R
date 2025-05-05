@@ -29,3 +29,8 @@ is.vector(h)
 class(h)
 class(r)
 #tipos de datos
+# factores
+vector_sexo <- c('hombre','mujer')
+factor_sexo <- factor(vector_sexo)
+factor_nse <- vector_nse <- c('pobre','medio','rico')|> factor()
+class(factor_nse)
