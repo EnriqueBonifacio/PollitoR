@@ -34,3 +34,12 @@ vector_sexo <- c('hombre','mujer')
 factor_sexo <- factor(vector_sexo)
 factor_nse <- vector_nse <- c('pobre','medio','rico')|> factor()
 class(factor_nse)
+
+levels(factor_nse) <- c('marron','medio','rico')
+levels(factor_nse) <- c('pobre','medio','rico')
+
+#ordenar los niveles 
+levels <- c('pobre','medio','rico')
+ordered <- TRUE
+factor(levels = levels, ordered = ordered)
+levels(factor_nse)
