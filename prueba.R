@@ -43,3 +43,10 @@ levels <- c('pobre','medio','rico')
 ordered <- TRUE
 factor(levels = levels, ordered = ordered)
 levels(factor_nse)
+vignette("base")
+?vignette
+
+#nstalacion de librerias
+install.packages('sf')
+vignette(package='sf')
+library(sf)
