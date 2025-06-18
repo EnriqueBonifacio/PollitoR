@@ -1,0 +1,15 @@
+install.packages(readxl)
+library(readxl)
+library(tidyverse)
+nueva_base = read_xlsx("BASE.xlsx")
+View(nueva_base)
+nueva_base <- read_xlsx("BASE.xlsx", skip = 1)
+dim(nueva_base)
+names(nueva_base)
+str(nueva_base)
+nueva_base$EDAD
+nueva_base[1:100,2:3]
+select(nueva_base,EDAD,SEXO)
+str(nueva_base)
+nueva_base$SEXO <- as.character(nueva_base$SEXO)
+str(nueva_base)
