@@ -50,3 +50,20 @@ vignette("base")
 install.packages('sf')
 vignette(package='sf')
 library(sf)
+
+v <- c(1,2,3,4,5,6)  
+w <- c(7,8,9,10,11,12,13,14,16)
+rbind(v)|>as.data.frame(v)
+rbind(w)|> as.data.frame(w)
+as.data.frame(rbind(v,w) , row names <- ('A','B'))
+frutas <- data.frame(
+  fruta = c('papaya', 'platano', 'manzana', 'fresa'),
+  precio = c(21, 51, 31, 54),
+  tienda = c('miraflores', 'san isidro', 'san borja', 'surco')
+)
+data.frame(cbind(fruta,precio,tienda))
+install.packages
+library(tidyverse)
+
+#Tibbles
+as_tibble(frutas)

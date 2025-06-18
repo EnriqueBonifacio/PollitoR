@@ -21,13 +21,38 @@ summary(df)
 dim(df)
 
 ##Nombres de columnas 
-colnames
+colnames(df)
 
 #Datos nulos
 colSums(is.na(df))
 
-df |> is.na() |> colSums() 
+df |> 
+  is.na() |>
+  colSums() 
 
 #pipe R base |>
 #pipe Tidyverse %>%
 df %>% is.na() %>% colSums()
+
+#Seleccionar columna
+df %>% 
+  select(EmployeeNumber, EducationField ,JobLevel)
+df %>% 
+  select(!EmpID:Attrition)
+df %>% 
+  select(c(Education:EducationField)& c(JobLevel,JobRole))
+df %>% select(c(Education:EducationField, JobLevel, JobRole))
+df %>% 
+  select(contains('Employee'))
+df %>% 
+  select(starts_with('Years'))
+df %>%
+  filter(YearsAtCompany >= 1 & YearsAtCompany <= 3) %>%
+  select(YearsAtCompany)
+
+df %>% 
+  filter(!is.na(YearsWithCurrManager))
+
+df %>%
+  filter(EducationField %in% c('Life Sciences','Medical') & YearsAtCompany>2)
+
